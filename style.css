@@ -1,0 +1,84 @@
+/* Estilo geral para o body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    background-color: #522585;
+    color: white;
+    padding: 25px 30px;
+}
+
+ .intro-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            /* Espaço entre imagem e texto */
+        }
+
+        .intro-container img {
+            max-width: 200px;
+            /* Ajuste a largura máxima da imagem */
+            height: auto;
+            /* Mantém a proporção da imagem */
+        }
+
+        .intro-container p {
+            margin: 0;
+            /* Remove margens padrão do parágrafo */
+        }
+
+/* Estilo para o container que alinha o conteúdo */
+.container {
+    display: flex;
+    justify-content: space-between; /* Espaço entre o logo e os links */
+    align-items: center; /* Alinha verticalmente ao centro */
+}
+
+/* Estilo para o logo */
+.logo {
+    font-size: 24px;
+    margin: 0;
+}
+
+/* Estilo para os links de navegação */
+nav {
+    display: flex;
+}
+
+/* Estilo para a lista de links */
+.nav-links {
+    list-style: none; /* Remove marcadores da lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Estilo para cada item da lista */
+.nav-links li {
+    margin-left: 20px; /* Espaçamento entre os links */
+}
+
+/* Estilo para os links */
+.nav-links a {
+    color: white;
+    text-decoration: none; /* Remove o sublinhado */
+    font-size: 18px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+
+header {
+    background-color: #a567d8;
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Arial', sans-serif; /* Adiciona a fonte Arial */
+}
+
