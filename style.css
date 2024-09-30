@@ -32,10 +32,27 @@ body {
     right: 0;
     left: 0;
     box-shadow: 0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.082);   
+    z-index: 99;
 }
 
 .header ul li a{
     text-decoration: none;
+    position: relative;
+}
+
+.header ul li a::after {
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    background-color: var(--primaryPurple);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.header ul li a:hover::after {
+    width: 100%;
 }
 
 .header ul li {
@@ -49,7 +66,6 @@ body {
     align-items: center;
     gap: 1rem;
 }
-
 
 #logo {
     font-family: 'Satisfy', sans-serif;
@@ -83,36 +99,34 @@ body {
     font-size: 1.2rem;
 }
 
-#introduction {
-    min-height: calc(100vh-35px);
-    width: 100%;
+.sides {
     display: flex;
     background-color: var(--white);
     padding: 0 3.5rem;
-    margin-bottom: 3.5rem;
 }
 
-.introduction-container {
+.sides-container-1 {
     display: flex;
     flex-direction: row;
     width: 100%;
+    margin-bottom: 3rem;
+    padding: 3rem;
 }
 
 #img-introduction {
     border-radius: 80%;
 }
 
-.left-side {
+.left-side-1 {
     width: 50%;
 }
 
 
-.right-side {
+.right-side-1 {
     width: 50%;
-   
 }
 
-.right-side h1 {
+.right-side-1 h2 {
     font-family: 'Satisfy', sans-serif;
     font-size: 2rem;
     font-weight: 300;
@@ -120,7 +134,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.right-side p {
+.default-text {
     color: var(--textColor);
     text-align: justify;
 }
@@ -133,6 +147,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
 }
 
 .banner h2 {
@@ -140,5 +155,37 @@ body {
     font-size: 2.5rem;
     font-family: 'Satisfy', sans-serif;
     font-weight: 300;
-    margin: 0;
+}
+
+
+.sides-container-2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;    
+    margin-bottom: 3rem;
+}
+
+.title-services {
+    color: var(--primaryGreen);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.left-side-2 {
+    width: 50%;
+    padding: 4rem;
+    color: var(--textColor);
+    width: 50%;
+}
+
+.right-side-2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#img-proced {
+    width: 50% ;
 }
