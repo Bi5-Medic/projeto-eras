@@ -6,7 +6,7 @@
 }
 
 :root {
-    --textColor: #ced4d7;
+    --textColor: #656b6e;
     --white : #fffffd;
     --primaryPurple: #9070ae;
     --secondaryPurple: #c6b6d5;
@@ -22,7 +22,7 @@ body {
 
 .header {
     background-color: var(--white);
-    min-height: 35px;
+    min-height: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -69,6 +69,7 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--white);
+    margin-bottom: 3.5rem;
 }
 
 .title h1 {
@@ -80,4 +81,64 @@ body {
 .title p{
     color: var(--white);
     font-size: 1.2rem;
+}
+
+#introduction {
+    min-height: calc(100vh-35px);
+    width: 100%;
+    display: flex;
+    background-color: var(--white);
+    padding: 0 3.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.introduction-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#img-introduction {
+    border-radius: 80%;
+}
+
+.left-side {
+    width: 50%;
+}
+
+
+.right-side {
+    width: 50%;
+   
+}
+
+.right-side h1 {
+    font-family: 'Satisfy', sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #348379;
+    margin-bottom: 1rem;
+}
+
+.right-side p {
+    color: var(--textColor);
+    text-align: justify;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 150px;
+    background: linear-gradient(to right, #7DA9A9, #5E918D, #4F837A, #6C9C92, #A0C5C0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    font-family: 'Satisfy', sans-serif;
+    font-weight: 300;
+    margin: 0;
 }
