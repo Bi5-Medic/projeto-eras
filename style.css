@@ -18,6 +18,7 @@ html,
 body {
     scroll-behavior: smooth;
     font-size: 16px;
+    color: var(--textColor);
 }
 
 .header {
@@ -119,6 +120,9 @@ body {
 
 .left-side-1 {
     width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center ;
 }
 
 
@@ -186,6 +190,14 @@ body {
     align-items: center;
 }
 
-#img-proced {
-    width: 50% ;
+#function {
+    background: linear-gradient(to right, #9070ae, #a488be, #8c6aa6, #b59fcd, #c6b6d5);
+
+}
+
+.title-right {
+    color: var(--primaryPurple);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
 }
