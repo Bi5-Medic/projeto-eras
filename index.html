@@ -11,11 +11,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
     <link rel="stylesheet" href="style.css">
     <!-- Ícones-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
-
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
@@ -25,11 +25,11 @@
         </div>
         <nav class="menu">
             <ul>
-                <li><a href="#introdução"> Introdução </a></li>
+                <li><a href="#introdução">Quem somos</a></li>
                 <li><a href="#serviços"> Serviços </a></li>
                 <li><a href="#funcionamento"> Como Funciona </a></li>
-                <li><a href="#contato"> Contato </a></li>
-                <li><a href="#faqs"> FAQs </a></li>
+                <li><a href="#faqs"> FAQs </a></li>                
+                <li><a href="#contato" id="link-contato"> Contato </a></li>
             </ul>
         </nav>
     </header>
@@ -45,7 +45,7 @@
         <section class="sides">
             <div class="sides-container-1">
                 <div class="left-side-1">
-                    <img id="img-introduction" src="img/introducao.png" alt="introducao">
+                    <img id="img-introduction" src="img/eras3.png" alt="introducao">
                 </div>
                 <div class="right-side-1">
                     <h2 id="introdução">Introdução</h2>
@@ -66,13 +66,13 @@
         </section>
 
 
-        <section>
-            <div class="banner">
+        <section class="wrapper">
+            <div class="banner-2">
                 <h2>Nossos Serviços</h2>
             </div>
 
-            <div class="sides-container-2">
-                <div class="left-side-2">
+            <div class="services-container">
+                <div class="services-card">
                     <h3 class="title-services">Liberação de Procedimentos Cirúrgicos</h3>
                     <p class="default-text">
                         Especialistas em OPME: Facilitamos a aprovação de órteses, próteses e materiais especiais. <br>
@@ -80,16 +80,19 @@
                         patrimônio.
                     </p>
                 </div>
-                <div class="right-side-2">
-                    <img id="img-proced" src="img/procedimento-red.png" alt="procedimento">
-                </div>
-            </div>
 
-            <div class="sides-container-1">
-                <div class="left-side-1">
-                    <img src="img/revisao-red.png" alt="revisao">
+                <div class="services-card">
+                    <h3 class="title-services">Suporte ao Paciente</h3>
+                    <p class="default-text">
+                        Atendimento Humanizado: Nosso compromisso é com a qualidade e o bem-estar dos pacientes,
+                        proporcionando um atendimento acolhedor e eficiente. <br>
+                        Acesso aos Melhores Hospitais: Garantimos que nossos pacientes sejam atendidos nos maiores e
+                        melhores hospitais, trazendo qualidade ao processo de cuidado.
+                    </p>
                 </div>
-                <div class="right-side-1">
+
+
+                <div class="services-card">
                     <h3 class="title-services">Revisão de Contas Hospitalares</h3>
                     <p class="default-text">
                         Redução de Glosas: Auditores especializados em revisar contas para minimizar glosas e otimizar
@@ -100,47 +103,34 @@
                     </p>
                 </div>
             </div>
-
-            <div class="sides-container-2">
-                <div class="left-side-2">
-                    <h3 class="title-services">Suporte ao Paciente</h3>
-                    <p class="default-text">
-                        Atendimento Humanizado: Nosso compromisso é com a qualidade e o bem-estar dos pacientes,
-                        proporcionando um atendimento acolhedor e eficiente. <br>
-                        Acesso aos Melhores Hospitais: Garantimos que nossos pacientes sejam atendidos nos maiores e
-                        melhores hospitais, trazendo qualidade ao processo de cuidado.
-                    </p>
-                </div>
-                <div class="right-side-2">
-                    <img src="img/suporte-red.png" alt="suporte">
-                </div>
-            </div>
         </section>
 
         <section>
             <div class="banner" id="function">
-                <h2>Como funciona</h2>
+                <h2>Como Funciona</h2>
             </div>
-
-            <div class="funci-container">
+        
+            <div class="funci-container" id="title-one">
                 <h3 class="title-right">Coleta de Documentos</h3>
                 <p>
-                    Para fornecer o melhor atendimento, precisamos que os seguintes documentos sejam apresentados:<br>
-                    Documento de identidade com foto (RG com CPF, CNH, etc.) do paciente;<br>
-                    Carteirinha do convênio;<br>
-                    Exame de RNM para elaboração de Pedido Médico;<br>
+                    Para fornecer o melhor atendimento, precisamos que os seguintes documentos sejam apresentados:
                 </p>
+                <ul>
+                    <li>Documento de identidade com foto (RG com CPF, CNH, etc.) do paciente;</li>
+                    <li>Carteirinha do convênio;</li>
+                    <li>Exame de RNM para elaboração de Pedido Médico;</li>
+                </ul>
             </div>
-
-            <div class="funci-container"></div>
+        
+            <div class="funci-container" id="title-two">
                 <h3 class="title-right">Análise e Intermediação</h3>
                 <p>
                     Nossa equipe avalia a documentação e realiza a intermediação entre o hospital e o plano de saúde,
                     agilizando a liberação dos procedimentos necessários.
                 </p>
             </div>
-
-            <div class="funci-container"></div>
+        
+            <div class="funci-container" id="title-three">
                 <h3 class="title-right">Acompanhamento Personalizado</h3>
                 <p>
                     Acompanhamos o paciente durante todo o processo, garantindo que ele receba o suporte necessário em todas
@@ -148,49 +138,68 @@
                 </p>
             </div>
         </section>
+        
 
         <section>
-            <h1 id="depoimentos"> DEPOIMENTOS </h1>
+            <div class="banner">
+                <h2>Depoimentos</h2>
+            </div>
             <div class="depoimento-container">
-                <p>
-                    "A Eras foi um verdadeiro anjo no momento mais difícil da minha vida. Quando descobri que precisava
-                    de uma cirurgia, eles cuidaram de tudo,
-                    me acolheram com carinho e profissionalismo, e garantiram que eu pudesse focar na minha recuperação.
-                    O atendimento humanizado e a rapidez na liberação do procedimento fizeram toda a diferença. Serei
-                    eternamente grata."<br>
-                    — Maria S., Paciente
-                </p>
-                <p>
-                    "Enfrentar um problema de saúde é desafiador, mas a Eras me fez sentir seguro e amparado em cada
-                    etapa. Não foi apenas sobre liberar meu procedimento,
-                    foi sobre o cuidado e a atenção que recebi como ser humano. A competência e dedicação da equipe
-                    superaram minhas expectativas.
-                    Recomendo fortemente para quem busca um atendimento com alma."<br>
-                    — João P., Paciente
-                </p>
+                <div class="depoimento">
+                    <p>
+                        "A Eras foi um verdadeiro anjo no momento mais difícil da minha vida. Quando descobri que precisava
+                        de uma cirurgia, eles cuidaram de tudo,
+                        me acolheram com carinho e profissionalismo, e garantiram que eu pudesse focar na minha recuperação.
+                        O atendimento humanizado e a rapidez na liberação do procedimento fizeram toda a diferença. Serei
+                        eternamente grata."<br>
+                        — Maria S., Paciente
+                    </p>
+                </div>
+                <div class="depoimento">
+                    <p>
+                        "Enfrentar um problema de saúde é desafiador, mas a Eras me fez sentir seguro e amparado em cada
+                        etapa. Não foi apenas sobre liberar meu procedimento,
+                        foi sobre o cuidado e a atenção que recebi como ser humano. A competência e dedicação da equipe
+                        superaram minhas expectativas.
+                        Recomendo muito para quem busca um atendimento de qualidade."<br>
+                        — João P., Paciente
+                    </p>
+                </div>
             </div>
         </section>
 
 
-        <section>
-            <h1 id="duvidas"> DÚVIDAS FREQUENTES </h1>
-            <div class="duvidas-container">
 
-                <p>
-                    1. Quais documentos são necessários para iniciar o processo?<br>
-                    Para iniciar o processo, precisaremos de um documento de identidade com foto, a carteirinha do
-                    convênio e o exame de RNM.
-                </p>
-                <p>
-                    2. Quanto tempo leva para a liberação de um procedimento cirúrgico?<br>
-                    O tempo pode variar, mas nossa equipe trabalha para garantir que a liberação seja feita com a maior
-                    agilidade possível.
-                </p>
-                <p>
-                    3. Quais hospitais vocês têm acesso?<br>
-                    Trabalhamos com os maiores e melhores hospitais, garantindo qualidade no atendimento.
-                </p>
+
+        <section>
+            <div class="faq-container">
+                <h2>Dúvidas frequentes</h2>
+                <div class="faq-item">
+                    <button class="faq-questions">Quais documentos são necessários para iniciar o processo?</button>
+                    <div class="faq-answer">
+                        Para iniciar o processo, precisaremos de um documento de identidade com foto, a carteirinha do
+                        convênio e o exame de RNM.                        
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-questions">Quanto tempo leva para a liberação de um procedimento cirúrgico?</button>
+                    <div class="faq-answer">
+                        O tempo pode variar, mas nossa equipe trabalha para garantir que a liberação seja feita com a maior
+                        agilidade possível.                     
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-questions">Quais hospitais vocês têm acesso?</button>
+                    <div class="faq-answer">
+                        Trabalhamos com os maiores e melhores hospitais, garantindo qualidade no atendimento.                       
+                    </div>
+                </div>
             </div>
+        </section>
+        
+        <div id="teste">
+            <img id="teste-img" src="/img/folder-eras.png" alt="">
+        </div>
 
             <div class="info_rodape">
                 <h3>Eras</h3>
@@ -206,7 +215,9 @@
 
 
     </main>
-
+    <div id="btn-top">
+        <i class="fas fa-arrow-up arrow up"></i>
+    </div>
+    <script src="script.js"></script>
 </body>
-
 </html>
