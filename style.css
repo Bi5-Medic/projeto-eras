@@ -298,8 +298,13 @@ main {
 }
 
 #depoimentos {
-    margin-bottom: 5rem;
+    margin: 5rem 3rem;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+    overflow: hidden;
 }
+
 #statement-title {
     display: inline-block;    
     color: var(--primaryGreen);
@@ -309,13 +314,22 @@ main {
 
 .statement-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*justify-content: center;
+    align-items: center;*/
     gap: 3rem;
     margin-bottom: 2rem;
+    height: auto;
+    width: 400%;
+}
+
+.statement-container input {
+    display: none;
 }
 
 .statement {
+    width: 25%;
+    position: relative;
+    transition: 1s;
     max-width: 30rem;
     background-color: var(--cardColor);
     border-radius: 15px;
@@ -324,6 +338,107 @@ main {
     box-shadow: 0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.082);
 }
 
+
+.nav-manual, .nav-auto{
+    position: absolute;
+    width: 100%;
+    margin-top: 20%;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-manual .manual-btn, .nav-auto div{
+    border: 1px solid var(--primaryPurple);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-manual .manual-btn:not(:last-child), .nav-auto div:not(:last-child){
+    margin-right: 10px;
+}
+
+.nav-manual .manual-btn:hover{
+    background-color: var(--primaryPurple);
+}
+
+#radio1:checked ~ .nav-auto .auto-btn1, #radio2:checked ~ .nav-auto .auto-btn2, #radio3:checked ~ .nav-auto .auto-btn3{
+    background-color: var(--primaryPurple);
+}
+
+#radio1:checked ~ .primeiro{
+    margin-left: 0%;
+}
+
+#radio2:checked ~ .primeiro{
+    margin-left: -25%;
+}
+
+#radio3:checked ~ .primeiro{
+    margin-left: -50%;
+}
+
+@media screen and (max-width: 900px) {
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .nav-auto, .nav-manual{
+        margin-top: 50%;
+    }
+}
+
+#faqs {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.faq-toggle{
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.faq-toggle button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: 1px solid var(--primaryPurple);
+    background-color: white;
+    color: var(--textColor);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+/* Estilo quando o botão está ativo */
+.faq-toggle button.active {
+    background-color: var(--primaryPurple);
+    color: white;
+}
+
+/* Estilo ao passar o mouse */
+.faq-toggle button:hover {
+    background-color: var(--secondaryPurple);
+    color: white;
+}
+
+#paciente-btn {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-right: none;
+}
+
+#medico-btn {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
 
 .faq-container {
     display: flex;
@@ -435,13 +550,13 @@ main {
     flex: 1; 
 }
 
-form {
+#contato form {
     display: flex;
     flex-direction: column; 
     gap: 15px; 
 }
 
-input, textarea {
+#contato input, textarea {
     width: 100%; 
     padding: 10px; 
     font-size: 1rem; 
@@ -449,7 +564,7 @@ input, textarea {
     border-radius: 5px; 
 }
 
-button {
+#contato button {
     padding: 10px 20px;
     font-size: 1rem;
     background-color: var(--secondaryGrren); 
@@ -459,6 +574,6 @@ button {
     cursor: pointer;
 }
 
-button:hover {
+#contato button:hover {
     background-color:var(--primaryGreen);
 }

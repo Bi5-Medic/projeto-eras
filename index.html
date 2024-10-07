@@ -153,7 +153,12 @@
                 <h2 id="statement-title">Depoimentos</h2>
             </div>
             <div class="statement-container">
-                <div class="statement">
+                <input type="radio" name="btn-radio" id="radio1">
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                <input type="radio" name="btn-radio" id="radio4">
+
+                <div class="statement primeiro">
                     <p>
                         "A Eras foi um verdadeiro anjo no momento mais difícil da minha vida. Quando descobri que precisava
                         de uma cirurgia, eles cuidaram de tudo,
@@ -173,16 +178,69 @@
                         — João P., Paciente
                     </p>
                 </div>
+                <div class="statement">
+                    <p>
+                        "Enfrentar um problema de saúde é desafiador, mas a Eras me fez sentir seguro e amparado em cada
+                        etapa. Não foi apenas sobre liberar meu procedimento,
+                        foi sobre o cuidado e a atenção que recebi como ser humano. A competência e dedicação da equipe
+                        superaram minhas expectativas.
+                        Recomendo muito para quem busca um atendimento de qualidade."<br>
+                        — João P., Paciente
+                    </p>
+                </div>
+                <div class="statement">
+                    <p>
+                        "Enfrentar um problema de saúde é desafiador, mas a Eras me fez sentir seguro e amparado em cada
+                        etapa. Não foi apenas sobre liberar meu procedimento,
+                        foi sobre o cuidado e a atenção que recebi como ser humano. A competência e dedicação da equipe
+                        superaram minhas expectativas.
+                        Recomendo muito para quem busca um atendimento de qualidade."<br>
+                        — João P., Paciente
+                    </p>
+                </div>
+
+                <div class="nav-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+    
+                <div class="nav-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                    <label for="radio4" class="manual-btn"></label>
+                </div>
             </div>
         </section>
 
         </section>
 
         <section id="faqs">
-            <div class="faq-container">
+            <div class="faq-toggle">
+                <button id="paciente-btn" class="active">Paciente</button>
+                <button id="medico-btn">Médico</button>
+            </div>
+            <div id="paciente-faq" class="faq-container">
                 <h2 id="faq-title">Dúvidas frequentes</h2>
                 <details class="faq-item">
                     <summary class="faq-question">Quais documentos são necessários para iniciar o processo?</summary>
+                    <p class="faq-answer">Para iniciar o processo, precisaremos de um documento de identidade com foto, a carteirinha do convênio e o exame de RNM. </p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Quanto tempo leva para a liberação de um procedimento cirúrgico?</summary>
+                    <p class="faq-answer">O tempo pode variar, mas nossa equipe trabalha para garantir que a liberação seja feita com a maior agilidade possível</p>
+                </details>
+                <details class="faq-item">
+                    <summary class="faq-question">Quais hospitais vocês têm acesso?</summary>
+                    <p class="faq-answer">Trabalhamos com os maiores e melhores hospitais, garantindo qualidade no atendimento.</p>
+                </details>
+            </div>
+            <div id="medico-faq" class="faq-container" style="display: none;">
+                <h2 id="faq-title">Dúvidas frequentes</h2>
+                <details class="faq-item">
+                    <summary class="faq-question"> MÉDICO Quais documentos são necessários para iniciar o processo?</summary>
                     <p class="faq-answer">Para iniciar o processo, precisaremos de um documento de identidade com foto, a carteirinha do convênio e o exame de RNM. </p>
                 </details>
                 <details class="faq-item">
