@@ -407,3 +407,58 @@ main {
     color: var(--white);
     background: linear-gradient(to right, #7DA9A9, #5E918D, #4F837A, #6C9C92, #A0C5C0);
 }
+
+
+#contato {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+}
+
+#img-form {
+    border-radius: 15px;
+    max-width: 50%; 
+    height: auto;
+}
+
+.form-container {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 50px; 
+    width: 80%;
+}
+
+
+.form {
+    flex: 1; 
+}
+
+form {
+    display: flex;
+    flex-direction: column; 
+    gap: 15px; 
+}
+
+input, textarea {
+    width: 100%; 
+    padding: 10px; 
+    font-size: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: var(--secondaryGrren); 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:var(--primaryGreen);
+}
