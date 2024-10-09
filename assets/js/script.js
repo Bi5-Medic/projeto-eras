@@ -61,3 +61,16 @@ function proximaImg(){
 
     document.getElementById('radio'+cont).checked = true
 }
+
+
+/* Menu mobile */
+
+const menuDiv = document.querySelector('.menu-mobile');
+const bntAnimation = document.getElementById('btn-menu');
+
+menuDiv.addEventListener('click', animationMenu)
+
+function animationMenu() {
+    menuDiv.classList.toggle('open');
+    bntAnimation.classList.toggle('active');
+}
