@@ -121,6 +121,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     color: var(--white);
     margin-bottom: 3.5rem;
 }
@@ -143,7 +144,6 @@ main {
     display: flex;
     background-color: var(--white);
     padding: 0 3.5rem;
-    flex-wrap: wrap;
     justify-content: space-around;
 }
 
@@ -151,6 +151,8 @@ main {
 .sides-container-1 {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     margin-bottom: 3rem;
     padding: 1rem;
@@ -172,7 +174,6 @@ main {
 
 .right-side-1 {
     width: 50%;
-
 }
 
 .right-side-1 h2 {
@@ -393,20 +394,6 @@ main {
     margin-left: -50%;
 }
 
-@media screen and (max-width: 900px) {
-    .img-desktop{
-        display: none;
-    }
-
-    .img-mobile{
-        display: block;
-    }
-
-    .nav-auto, .nav-manual{
-        margin-top: 50%;
-    }
-}
-
 #faqs {
     display: flex;
     align-items:center;
@@ -554,7 +541,8 @@ main {
 .form-container {
     display: flex; 
     align-items: center; 
-    justify-content: space-between; 
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 50px; 
     width: 80%;
 }
@@ -684,6 +672,19 @@ main {
     }
 }
 
+@media screen and (max-width: 900px) {
+    .img-desktop{
+        display: none;
+    }
+
+    .img-mobile{
+        display: block;
+    }
+
+    .nav-auto, .nav-manual{
+        margin-top: 50%;
+    }
+}
 
 /* Responsividade */
 @media (max-width: 768px) {
@@ -715,6 +716,14 @@ main {
 
     .title p {
         font-size: 1rem;
+    }
+
+    .right-side-1 {
+        width: 80%;
+    }
+
+    .faq-container{
+        max-width: 80%;
     }
 }
 
