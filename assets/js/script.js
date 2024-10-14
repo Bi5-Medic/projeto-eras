@@ -1,22 +1,18 @@
-/* Efeito de diminuição do header */
-window.addEventListener("scroll", function() {
-    let header = this.document.querySelector('.header');
-    header.classList.toggle('scrolling', this.scrollY > 0)
-})
+window.addEventListener("scroll", function () {
+    const header = document.querySelector('.header');
+    header.classList.toggle('scrolling', window.scrollY > 0);
+});
 
 const btn = document.getElementById('btn-top');
-btn.addEventListener("click", function() {
-    window.scrollTo(0,0);
-})
+btn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 document.addEventListener("scroll", ocult);
 
 function ocult() {
-    if(window.scrollY > 10) {
-        btn.style.display ="flex";
-    } else {
-        btn.style.display ="none"
-    }
+    const btn = document.getElementById('btn-top');
+    btn.style.display = window.scrollY > 10 ? "flex" : "none";
 }
 
 ocult();
@@ -43,7 +39,7 @@ function toggleFaq(role) {
 pacienteBtn.addEventListener('click', () => toggleFaq('paciente'));
 medicoBtn.addEventListener('click', () => toggleFaq('medico'));
 
-var radio = document.querySelector('.manual-btn')
+/*var radio = document.querySelector('.manual-btn')
 var cont = 1
 
 document.getElementById('radio1').checked = true
@@ -55,12 +51,12 @@ setInterval(() => {
 function proximaImg(){
     cont++
 
-    if(cont > 3){
+    if(cont > 5){
         cont = 1 
     }
 
     document.getElementById('radio'+cont).checked = true
-}
+}*/
 
 
 /* Menu mobile */

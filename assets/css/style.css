@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Variáveis css de cores e fontes */
 :root {
     --textColor: #656b6e;
     --white : #fffffd;
@@ -24,7 +25,6 @@ body {
     scroll-behavior: smooth;
     font-size: 16px;
     color: var(--textColor);
-    overflow-x: hidden;
 }
 
 main {
@@ -34,10 +34,10 @@ main {
     margin: auto;
 }
 
+/* Menu desktop */
 .header {
     background-color: var(--white);
     min-height: 25px;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -47,21 +47,25 @@ main {
     left: 0;
     box-shadow: 0.5px 0.5px 10px 0.5px rgba(0, 0, 0, 0.082);   
     transition: 0.8s;
-    flex-grow: 5;
+    flex-grow: 2;
     z-index: 99;
+    margin: 0;
+    max-width: 100%;
 }
 
+/* Efeito de diminuição do header após scroll para baixo */
 .header.scrolling {
     padding: 10px 35px;
 }
 
-.header ul li a{
+.menu-desktop ul li a{
     text-decoration: none;
     position: relative;
     color: var(--primaryPurple);
 }
 
-.header ul li a::after {
+/* Efeito de hover com linha abaixo dos itens no menu */
+.menu-desktop ul li a::after {
     content: " ";
     width: 0%;
     height: 1.5px;
@@ -72,22 +76,24 @@ main {
     transition: 0.2s ease-in-out;
 }
 
-.header ul li a:hover::after {
+/* Ajuda do efeito hover e faz com que não seja aplicado no último item pois é um botão*/
+.menu-desktop ul li:not(:last-child) a:hover::after {
     width: 100%;
 }
 
-.header ul li {
+.menu-desktop ul li {
     text-decoration: none;
     list-style: none;
 }
 
-.header ul{
+.menu-desktop ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
 
+/* Logo: palavra Eras */
 #logo {
     font-family: var(--highlightedFont);
     font-weight: bolder;
@@ -96,18 +102,20 @@ main {
     margin: 0;
 }
 
+/* Botão de contato no nav */
 #link-contato {
     background-color: var(--primaryPurple);
     padding: 10px;
     border-radius: 10px;
     color: var(--white);
-
 }
 
+/* Seção inicial com imagem e texto Eras */
 .initial-section {
     background: linear-gradient(rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0.541)), url("/assets/img/capa2.jpg");
     width: 100%;
     height: 100vh;
+    padding: 5%;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -117,23 +125,29 @@ main {
     margin-bottom: 3.5rem;
 }
 
+/* Título Eras */
 .title h1 {
     font-family: 'Satisfy', sans-serif;
     font-weight: 500;
     font-size: 7rem;
 }
 
+/* Subtítulo Eras */
 .title p{
     color: var(--white);
     font-size: 1.2rem;
 }
 
+/* Container maior da introdução, tem outros dois dentro dele */
 .sides {
     display: flex;
     background-color: var(--white);
     padding: 0 3.5rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
+/* Container esquerdo com a imahem*/
 .sides-container-1 {
     display: flex;
     flex-direction: row;
@@ -298,7 +312,7 @@ main {
 }
 
 #depoimentos {
-    margin: 5rem 3rem;
+    margin: 5rem 2rem;
     width: 100%;
     height: auto;
     padding: 0 !important;
@@ -600,9 +614,14 @@ main {
     height: auto;
 }
 
+.menu-mobile nav li {
+    list-style: none;
+}
+
 .menu-mobile nav a {
     color: var(--primaryPurple);
     text-decoration: none;
+    list-style: none;
     display: block;
     padding: 20px 30px;
 }
@@ -638,7 +657,7 @@ main {
 }
 
 #btn-menu.active .line:nth-child(3) {
-    transform: translateY(2px) rotate(45deg);
+    transform: translateY(-2px) rotate(45deg);
     background-color: var(--secondaryPurple);
 }
 
@@ -649,7 +668,7 @@ main {
 
 /*Menu mobile responsivo */
 @media screen and (max-width: 1030px) {
-    .menu {
+    .menu-desktop {
         display: none;
     }
 
@@ -661,6 +680,59 @@ main {
 
     #btn-menu {
         display: block;
+        margin-right: 1rem;
     }
-    
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 20px;
+    }
+
+    .initial-section {
+        padding: 5%;
+    }
+
+    .menu-desktop ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #logo {
+        font-size: 1.5rem;
+    }
+
+    #link-contato {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    .title h1 {
+        font-size: 4rem;
+    }
+
+    .title p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .initial-section {
+        height: 80vh; /* Reduz a altura em telas pequenas */
+        padding: 5%;
+    }
+
+    .menu-desktop ul {
+        display: none; /* Esconde o menu em dispositivos muito pequenos */
+    }
+
+    .title h1 {
+        font-size: 3rem;
+    }
+
+    .title p {
+        font-size: 0.8rem;
+    }
 }
