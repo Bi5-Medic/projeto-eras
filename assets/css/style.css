@@ -545,6 +545,11 @@ main {
     flex-wrap: wrap;
     gap: 50px; 
     width: 80%;
+    padding: 5%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.055);
+    background: linear-gradient(180deg, var(--primaryGreen) 0%, var(--secondaryGrren) 100%);
+    color: var(--white);
+    border-radius: 10px;
 }
 
 
@@ -574,6 +579,7 @@ main {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.253) ;
 }
 
 #contato button:hover {
