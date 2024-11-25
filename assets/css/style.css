@@ -143,7 +143,7 @@ main {
 .sides {
     display: flex;
     background-color: var(--white);
-    padding: 0 3.5rem;
+    padding: 0 1.5rem;
     justify-content: space-around;
 }
 
@@ -151,8 +151,8 @@ main {
 .sides-container-1 {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     width: 100%;
     margin-bottom: 3rem;
     padding: 1rem;
@@ -165,6 +165,7 @@ main {
 }
 
 .left-side-1 {
+    flex: 1;
     width: 50%;
     display: flex;
     align-items: center;
@@ -529,7 +530,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 4rem;
+    padding: 1.5rem;
 }
 
 #img-form {
@@ -542,12 +543,12 @@ main {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: row;
     gap: 50px; 
     width: 80%;
     padding: 5%;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.055);
-    background: linear-gradient(180deg, var(--primaryGreen) 0%, var(--secondaryGrren) 100%);
+    background: linear-gradient(180deg, var(--primaryGreen) 50%, var(--secondaryGrren) 70%);
     color: var(--white);
     border-radius: 10px;
 }
@@ -730,6 +731,14 @@ main {
 
     .faq-container{
         max-width: 80%;
+    }
+
+    .sides-container-1{
+        flex-direction: column;
+    }
+
+    .form-container {
+        flex-direction: column;
     }
 }
 
